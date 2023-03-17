@@ -102,7 +102,11 @@ class _NotifierPreviewItemState extends ConsumerState<NotifierPreviewItem> {
                               ? const Icon(
                                   Icons.shopping_cart,
                                   color: Color(0xff243763),
-                                )
+                                ).animate(
+                                  onPlay: (controller) {
+                                    controller.forward();
+                                  },
+                                ).shake()
                               : const Icon(Icons.shopping_cart_outlined)
                         ],
                       ),

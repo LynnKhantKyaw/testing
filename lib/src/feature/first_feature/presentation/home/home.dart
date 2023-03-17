@@ -33,9 +33,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     child: Stack(
                       children: [
                         SingleChildScrollView(
-                          child: HomeScreen(
-                              animationController: _animationController,
-                              isDraw: _isDraw),
+                          child: Container(
+                            margin: const EdgeInsets.only(top: 40),
+                            child: HomeScreen(
+                                animationController: _animationController,
+                                isDraw: _isDraw),
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
